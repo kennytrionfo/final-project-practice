@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Daily Deeds Dashboard</h1>
+  <h3>Add your deeds and grow your points!</h3>
+
+  <div class="total"> </div>
+</br>
+
+    <table style="width:400px">
+    <tr>
+      <td>I turned off the lights.</td>
+      <td><button id="lights" value="10">Done!</button></td>
+      <td>Total:</td>
+      <td id="lights_total"> </td>
+    </tr>
+
+    <tr>
+      <td>I used my own bags at the grocery store.</td>
+      <td><button id="bags" value="5">Done!</button>
+</td>
+      <td>Total:</td>
+      <td id="bags_total"> </td>
+    </tr>
+
+    <tr>
+      <td>I road my bike to work.</td>
+      <td><button id = "bike" value="15">Done!</button>
+</td>
+      <td>Total:</td>
+      <td id="bike_total"> </td>
+    </tr>
+
+    <tr>
+      <td>I carpooled instead of taking my car.</td>
+      <td><button id="carpool" value="35">Done!</button>
+</td>
+      <td>Total:</td>
+      <td id="carpool_total"> </td>
+    </tr>
+
+    <tr>
+      <td>I put a load of laundry on the line.</td>
+      <td><button id="laundry" value="15">Done!</button>
+</td>
+      <td>Total:</td>
+      <td id="laundry_total"> </td>
+    </tr>
+
+    </table>
+
+
+  <script>
+
+  var theTotal = 0;
+  $('button').click(function(){
+     theTotal = Number(theTotal) + Number($(this).val());
+     $('.total').text("Your Grand Total: "+theTotal);
+  });
+  $('.total').text("Your Grand Total: "+theTotal);
+
+  var lightsTotal = 0;
+  $('#lights').click(function(){
+     lightsTotal = Number(lightsTotal) + Number($(this).val());
+     $('#lights_total').text(lightsTotal);
+  });
+  $('#lights_total').text(lightsTotal);
+
+  var bagsTotal = 0;
+  $('#bags').click(function(){
+     bagsTotal = Number(bagsTotal) + Number($(this).val());
+     $('#bags_total').text(bagsTotal);
+  });
+  $('#bags_total').text(bagsTotal);
+
+  var bikeTotal = 0;
+  $('#bike').click(function(){
+     bikeTotal = Number(bikeTotal) + Number($(this).val());
+     $('#bike_total').text(bikeTotal);
+  });
+  $('#bike_total').text(bikeTotal);
+
+  var carpoolTotal = 0;
+  $('#carpool').click(function(){
+     carpoolTotal = Number(carpoolTotal) + Number($(this).val());
+     $('#carpool_total').text(carpoolTotal);
+  });
+  $('#carpool_total').text(carpoolTotal);
+
+  var laundryTotal = 0;
+  $('#laundry').click(function(){
+     laundryTotal = Number(laundryTotal) + Number($(this).val());
+     $('#laundry_total').text(laundryTotal);
+  });
+  $('#laundry_total').text(laundryTotal);
+
+  </script>
+
+   <style media="screen">
+     .total {
+        position: absolute;
+        left: 300px;
+        font-weight:bold;
+     }
+   </style>
+
+</body>
+
+
+</html>
